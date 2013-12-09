@@ -11,4 +11,5 @@ LOCAL_LDLIBS := -llog -ljnigraphics -lz -landroid
 LOCAL_SHARED_LIBRARIES := libavformat libavcodec libswscale libavutil
  
 include $(BUILD_SHARED_LIBRARY)
-$(call import-module,library/)
+$(call import-add-path, $(LOCAL_PATH))
+$(call import-module,./library)
